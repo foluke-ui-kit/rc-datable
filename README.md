@@ -1,4 +1,5 @@
-# RC-Datable
+# RC-Datatable
+
 A Jquery Datatable Component for React - creat sortable data tables in react using [jQuery Datable](//datatables.net) 
 
 __Features:__
