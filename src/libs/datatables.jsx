@@ -4,8 +4,12 @@
 
 
 import React from 'react';
-import { RcTable } from '@shawnsandy/rc-tables';
+import $ from 'jquery';
+//import { RcTable } from '@shawnsandy/rc-tables';
 import Datatable from 'datatables';
+import { Caption, Header, TableBody } from '@shawnsandy/rc-tables';
+
+
 export class RcDataTable extends React.Component {
 
     constructor(props) {
@@ -32,9 +36,12 @@ export class RcDataTable extends React.Component {
         var colsTables = ['id','first_name','last_name'];
         return (
             //component
-
-            <RcTable data={data} cols={cols} colTables={colsTables} />
-
+        <div ref="rcTable">
+            <table className="table table-hover">
+                <Header cols={cols} />
+                <TableBody data={data} colTables={colsTables} />
+            </table>
+        </div>
 
         )
     }
